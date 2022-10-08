@@ -27,7 +27,7 @@
 ## Usage [ Keybinds ] 
 | Key                                  | Function                   |
 | -----                                | -----                      |
-| **[Software]**                       | **Action**                 |
+| **[Software]**                       | **Function**               |
 | Alt + p                              | screenshot(using scrot)    |
 | Alt + d                              | launcher                   |
 | Super + Return                       | kitty                      |
