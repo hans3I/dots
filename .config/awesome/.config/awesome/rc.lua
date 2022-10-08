@@ -11,7 +11,6 @@ local wibox = require("wibox")
 -- Theme handling library
 local beautiful = require("beautiful")
 -- Notification library
-local rubato = require("lib.rubato")
 local naughty = require("naughty")
 local menubar = require("lib.menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
