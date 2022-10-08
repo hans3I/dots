@@ -1,5 +1,5 @@
 <h1 align="center">Dotfiles</h1>
-<h4 align="center">I mainly use awesome *stable*, sooo</h4>
+<h4 align="center">I mainly use awesome "stable"</h4>
 
 <p align="center">
   <img src="preview.png">
