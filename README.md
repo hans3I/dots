@@ -1,11 +1,5 @@
-<h1 align="center">AweDots</h1>
-<h4 align="center">Config files for AwesomeWm</h4>
-
-<p align="center">
-  <a href="https://github.com/Manas140/dotfiles/stargazers"><img src="https://img.shields.io/github/stars/Manas140/dotfiles?colorA=151515&colorB=8C977D&style=for-the-badge&logo=starship"></a>
-  <a href="https://github.com/Manas140/dotfiles/issues"><img src="https://img.shields.io/github/issues/Manas140/dotfiles?colorA=151515&colorB=B66467&style=for-the-badge&logo=bugatti"></a>
-  <a href="https://github.com/Manas140/dotfiles/network/members"><img src="https://img.shields.io/github/forks/Manas140/dotfiles?colorA=151515&colorB=8DA3B9&style=for-the-badge&logo=github"></a>
-</p>
+<h1 align="center">Dotfiles</h1>
+<h4 align="center">Mainly use AwesomeWM for my workflow</h4>
 
 <p align="center">
   <img src="preview.png">
@@ -15,16 +9,11 @@
 
 - <details><summary>Prerequisites</summary>
 
-  > Must have, just to make sure everything works properly
+
+  > Suggested packages, make sure everything works properly
 
     ```
-    awesome bluez elogind flameshot kitty mpd mpDris2 nmcli playerctl pulsemixer redshift rofi xbacklight xsettingsd zsh
-    ```
-
-  > Suggested, makes everything feel complete
-
-    ```
-    alacritty firefox ncmpcpp nvim lf zathura
+    alacritty firefox bash nvim picom
     ```
 
 </details>
@@ -32,14 +21,10 @@
 - Clone the repo
 
   ```
-  git clone https://github.com/Manas140/dotfiles.git --depth=1 --branch='awedots' && cd dotfiles
+  git clone https://github.com/hans3I/dots.git --depth=1
   ```
 
-- Install / Copy all configs
-
-  ```
-  ./install.sh 
-  ```
+- Then link all the files to your home directory
 
 </details>
 
@@ -47,31 +32,23 @@
 | Key                                  | Action                     |
 | -----                                | -----                      |
 | **[Software]**                       | **Action**                 |
-| Print                                | flameshot gui              |
-| Super + r                            | rofi                       |
+| Alt + p                              | Screenshot(using scrot)    |
+| Alt + d                              | Launcher                   |
 | Super + Return                       | kitty                      |
 |                                      |                            |
-| **[Hardware]**                       | **Action**                 |
-| Fn + Arrow [Up,Down]                 | Volume Control             |
-| Fn + Arrow [Left,Right]              | Brightness Control         |
-|                                      |                            |
 | **[AwesomeWm]**                      | **Action**                 |
-| Super + d                            | open dashboard             |
-| Super + q                            | kill focused window        |
-| Alt + Tab                            | toggle window focus        |
-| Super + Tab                          | toggle floating/tiling     |
-| Super + space                        | toggle fullscreen          |
-| Super + [1-9]                        | focus desktop 1-9          |
-| Super + Shift + [1-9]                | move window to desktop 1-9 |
-| Super + Arrow [Up,Down,Left,Right]   | resize window              |
+| F1                                   | show keybindings           |
+| Alt + q                              | kill focused window        |
+| Alt + e                              | toggle fullscreen          |
+| Alt + space                          | toggle floating/tiling     |
+| Alt + j/k                            | toggle window focus        |
+| Alt + h/l                            | resize window              |
+| Alt + [1-9]                          | focus desktop 1-9          |
+| Alt + Shift + [1-9]                  | move window to desktop 1-9 |
+| Alt + Shift + q                      | quit awesomewm             |
+| Alt + Shift + r                      | restart awesomewm          |
 
 
 ## Project references
-  - Colorscheme: [Paradise-theme](https://github.com/paradise-theme)
-  - Fetch: [Fetch](https://github.com/manas140/fetch)
-  - Firefox: [SimpleFox](https://github.com/migueravila/SimpleFox)
+  - Colorscheme: [Tokyonight](https://github.com/folke/tokyonight.nvim)
   - Nvim: [Conscious](https://github.com/manas140/conscious)
-
-## Special Thanks
-
-  - [Rklyz](https://github.com/rklyz)
