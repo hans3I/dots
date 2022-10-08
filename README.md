@@ -35,6 +35,7 @@
 |                                      |                            |
 | **[AwesomeWm]**                      | **Action**                 |
 | F1                                   | show keybindings           |
+| Alt + s                              | toggle systray             |
 | Alt + q                              | kill focused window        |
 | Alt + e                              | toggle fullscreen          |
 | Alt + space                          | toggle floating/tiling     |
