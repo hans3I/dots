@@ -1,0 +1,45 @@
+#! /bin/sh
+
+#####################################################
+#   ██████╗ ███████╗██████╗ ██╗    ██╗███╗   ███╗   #
+#   ██╔══██╗██╔════╝██╔══██╗██║    ██║████╗ ████║   #
+#   ██████╔╝███████╗██████╔╝██║ █╗ ██║██╔████╔██║   #
+#   ██╔══██╗╚════██║██╔═══╝ ██║███╗██║██║╚██╔╝██║   #
+#   ██████╔╝███████║██║     ╚███╔███╔╝██║ ╚═╝ ██║   #
+#   ╚═════╝ ╚══════╝╚═╝      ╚══╝╚══╝ ╚═╝     ╚═╝   #                                    
+#####################################################
+
+bspc config pointer_modifier mod1
+bspc monitor -d I II III IV V VI
+
+bspc config top_padding 40
+bspc config border_width 2
+bspc config window_gap 12
+
+bspc config split_ratio          0.50
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a Chromium desktop='^2'
+bspc rule -a mplayer2 state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
+
+sxhkd -c "$HOME/.config/bspwm/sxhkdrc" &
+
+polybar launcher -r &
+polybar left -r &
+#polybar systray -r &
+polybar middle -r &
+polybar volume -r &
+polybar right -r &
+
+~/.fehbg &
+
+picom --config ~/.config/bspwm/picom.conf &
+
+nm-applet &
+
+xsetroot -cursor_name left_ptr &
+setxkbmap -option caps:swapescape &
