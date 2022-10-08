@@ -1,5 +1,4 @@
 <h1 align="center">Dotfiles</h1>
-<h4 align="center">I mainly use awesome "stable"</h4>
 
 <p align="center">
   <img src="preview.png">
@@ -10,7 +9,7 @@
 - Suggested packages, just to make sure everything works properly
 
     ```
-    alacritty firefox bash nvim picom
+    awesome alacritty firefox bash nvim picom
     ```
 
 </details>
@@ -26,14 +25,14 @@
 </details>
 
 ## Usage [ Keybinds ] 
-| Key                                  | Action                     |
+| Key                                  | Function                   |
 | -----                                | -----                      |
 | **[Software]**                       | **Action**                 |
-| Alt + p                              | Screenshot(using scrot)    |
-| Alt + d                              | Launcher                   |
+| Alt + p                              | screenshot(using scrot)    |
+| Alt + d                              | launcher                   |
 | Super + Return                       | kitty                      |
 |                                      |                            |
-| **[AwesomeWm]**                      | **Action**                 |
+| **[AwesomeWM]**                      | **Function**               |
 | F1                                   | show keybindings           |
 | Alt + s                              | toggle systray             |
 | Alt + q                              | kill focused window        |
