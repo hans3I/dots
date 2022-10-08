@@ -12,8 +12,8 @@ export MICRO_TRUECOLOR=1
 # Aliases
 alias gl='git clone --depth 1 -v'
 alias gp='git push -v'
-alias ga='git add -v'
-alias gc='git commit -v'
+alias ga='git add -v .'
+alias gc='git commit -vm "updates"'
 alias ls='ls --color=auto -t'
 alias la='ls --color=auto -ta'
 alias open='xdg-open'
