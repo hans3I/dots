@@ -7,10 +7,7 @@
 
 ## Installation
 
-- <details><summary>Prerequisites</summary>
-
-
-  > Suggested packages, make sure everything works properly
+- Suggested packages, just to make sure everything works properly
 
     ```
     alacritty firefox bash nvim picom
