@@ -10,7 +10,7 @@ local gears = require("gears")
 -- {{{ Main
 local theme = {}
 local themes_path = os.getenv("HOME") .. "/.config/awesome/theme"
-theme.wallpaper = themes_path .. "/wallpaper/wallp.jpg"
+theme.wallpaper = themes_path .. "/wallpaper/circuit.png"
 -- }}}
 
 -- {{{ Styles
