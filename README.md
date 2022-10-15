@@ -30,7 +30,7 @@
 | **[Software]**                       | **Function**               |
 | Alt + p                              | screenshot(using scrot)    |
 | Alt + d                              | launcher                   |
-| Super + Return                       | kitty                      |
+| Alt + Return                         | alacritty                      |
 |                                      |                            |
 | **[AwesomeWM]**                      | **Function**               |
 | F1                                   | show keybindings           |
