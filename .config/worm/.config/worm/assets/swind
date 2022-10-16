@@ -1,0 +1,51 @@
+#!/bin/bash
+
+# Written by Andrew McDonough
+# A simple bash script that uses xdotool to move the window that is currently in focus to different parts of the screen.
+# Particularly useful for reading web pages with flexible layouts on wide monitors.
+# Assign the various options to keyboard shortcuts e.g. '<Super>Left' assigned to 'swind left'
+# See http://tinyurl.com/ubuntukeys for help with assigning keyboard shortcuts.
+
+# Change the following to suit your own monitor's resolution.  Mine is 1920x1200
+width=1920
+height=1200
+
+winid=`xdotool getwindowfocus`
+
+case "$1" in
+'')
+  echo "Usage: swind <left|right|top|bottom|top-left|top-right|bottom-left|bottom-right>"
+;;  
+'left')
+  xdotool windowmove $winid 0 0
+  xdotool windowsize $winid $(( $width/2 )) $height
+;;
+'right')
+  xdotool windowmove $winid $(( $width/2))  0
+  xdotool windowsize $winid $(( $width/2)) $height
+;;
+'top')
+  xdotool windowmove $winid 0 0
+  xdotool windowsize $winid $width $(( $height/2 ))
+;;
+'bottom')
+  xdotool windowmove $winid 0 $(( $height/2 ))
+  xdotool windowsize $winid $width $(( $height/2 ))
+;;
+'top-left')
+  xdotool windowmove $winid 0 0
+  xdotool windowsize $winid $(( $width/2 )) $(( $height/2))
+;;
+'top-right')
+  xdotool windowmove $winid $(( $width/2))  0
+  xdotool windowsize $winid $(( $width/2 )) $(( $height/2 ))
+;;
+'bottom-left')
+  xdotool windowmove $winid 0 $(( $width/2 ))
+  xdotool windowsize $winid $(( $width/2 )) $(( $height/2 ))
+;;
+'bottom-right')
+  xdotool windowmove $winid $(( $width/2))  $(( $height/2 ))
+  xdotool windowsize $winid $(( $width/2 )) $(( $height/2 ))
+;;
+esac

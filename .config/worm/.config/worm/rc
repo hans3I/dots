@@ -2,23 +2,29 @@
 exec sxhkd -c ~/.config/worm/sxhkdrc &
 exec ~/.fehbg &
 exec picom &
+exec alttab &
 exec nm-applet &
 exec dunst &
 exec xsetroot -cursor_name left_ptr &
 exec setxkbmap -option caps:swapescape &
+exec tint2 -c ~/.config/tint2/tint2rc &
+exec tint2 -c ~/.config/tint2/tint2rcright &
 
-wormc frame-active-pixel $((16#FF383C4A))
-wormc frame-inactive-pixel $((16#FF383C4A)) # todo: diff color for active window (the bug here was fixed, this works now)
+wormc frame-active-pixel $((16#FF414868))
+wormc frame-inactive-pixel $((16#FF414868)) # todo: diff color for active window (the bug here was fixed, this works now)
+wormc text-active-pixel $((16#FFc0caf5))
+wormc text-inactive-pixel $((16#FF8188a6))
 wormc frame-center T
 wormc text-font 'Fantasque Sans Mono:size=10'
 wormc frame-right 'I;M;'
 wormc button-offset 5 7
-wormc minimize-path ~/.config/worm/buttons/minimize.png
-wormc maximize-path ~/.config/worm/buttons/maximize.png
-wormc button-size 16
-wormc border-width 2
+wormc minimize-path ~/.config/worm/assets/minimize.png
+wormc maximize-path ~/.config/worm/assets/maximize.png
+wormc button-size 20
+wormc border-width 0
 wormc border-active-pixel $((16#FF5294e2))
 wormc border-inactive-pixel $((16#FF7c818c))
-wormc struts 10 10 10 10
-wormc gaps 10
+wormc struts 15 70 15 15
+wormc gaps 15
 wormc layout floating
+wormc focus-mode 2

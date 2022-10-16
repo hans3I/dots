@@ -128,7 +128,7 @@ getWM() {
   fi
 
   # Show DE/WMs session information. $DE > $WM
-  printf "${c5}${*}  ${rs}%s" "${DE:-${WM:-Unknown}}"
+  printf "${c5}${*}  ${rs}%s" "${DE:-${WM:-worm}}"
 
 }
 
@@ -249,6 +249,7 @@ rs='\033[0m'     # Reset.
 bb="${bo} ${c4}" # Bold blue.
 bg="${bo} ${c2}" # Bold green.
 
+worm="Worm"
 # Print ASCII coffee and relax.
 printf                 "
 ${bb}    ) )     ${bo}%s
@@ -264,7 +265,7 @@ ${bg}  '____'    ${rs}%s
 "$(getWM         ''  )" \
 "$(getPackages   ''  )" \
 "$(getUptime     ''  )" \
-"$(getPalette    ''  )"
+#"$(getPalette    ''  )"
 
 exit ${?}
 # vim:ft=sh:nowrap

@@ -10,6 +10,8 @@ export PATH="$HOME/.local/bin/:$PATH"
 export MICRO_TRUECOLOR=1
 
 # Aliases
+alias vim='nvim'
+alias xinit='startx'
 alias l='clear'
 alias gl='git clone --depth 1 -v'
 alias gp='git push -v'
