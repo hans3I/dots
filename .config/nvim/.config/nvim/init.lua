@@ -1,28 +1,22 @@
-fn = vim.fn
-api = vim.api
-cmd = vim.cmd
-opt = vim.opt
-g = vim.g
-
-_G.theme = "paradise"
-
-local modules = {
-  'options',
-  'mappings',
-  'statusline',
-  'colors',
-  'plugins',
-}
-
-for _, a in ipairs(modules) do
-  local ok, err = pcall(require, a)
-  if not ok then
-    error("Error calling " .. a .. err)
-  end
-end
-
--- Auto commands
-api.nvim_create_autocmd("TermOpen", {
-  pattern = "term://*",
-  command = "setlocal nonumber norelativenumber signcolumn=no | setfiletype terminal",
-})
+require "user.options"
+require "user.keymaps"
+require "user.plugins"
+require "user.autocommands"
+require "user.colorscheme"
+require "user.cmp"
+require "user.telescope"
+require "user.gitsigns"
+require "user.treesitter"
+require "user.autopairs"
+require "user.comment"
+require "user.nvim-tree"
+require "user.bufferline"
+require "user.lualine"
+require "user.toggleterm"
+require "user.project"
+require "user.impatient"
+require "user.illuminate"
+require "user.indentline"
+require "user.alpha"
+require "user.lsp"
+require "user.dap"

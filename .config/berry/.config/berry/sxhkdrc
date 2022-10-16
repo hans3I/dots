@@ -1,0 +1,80 @@
+#
+# wm independent hotkeys
+#
+
+# terminal emulator
+alt + Return
+	alacritty --config-file ~/.config/berry/alacritty.yml
+
+# program launcher
+alt + d
+	rofi -show drun
+
+# make sxhkd reload its configuration files:
+alt + r
+	pkill -USR1 -x sxhkd
+
+# screenshot
+alt + s
+  screenshot
+
+#
+# berry hotkeys
+#
+
+alt + {h, j, k, l}
+    berryc window_move {-50 0, 0 50, 0 -50, 50 0}
+
+alt + shift +  {h, j, k, l}
+    berryc window_resize {-50 0, 0 50, 0 -50, 50 0}
+
+alt + {1-9}
+    berryc switch_workspace {0-9}
+
+alt + shift + {1-9}
+    berryc send_to_workspace {0-9}
+
+#alt + {_,shift +} {1-7}
+#    berryc {switch_workspace,send_to_workspace} {1-7} && $HOME/.config/berry/scripts/workspace.sh
+
+alt + m
+    berryc window_monocle
+
+alt + e
+    berryc fullscreen
+
+alt + u
+    berryc snap_left
+
+alt +  i
+    berryc snap_right
+
+alt + n
+    berryc toggle_decorations
+
+alt + Tab
+    berryc cycle_focus
+
+alt + q
+    berryc window_close
+
+alt + c
+    berryc window_center
+
+~button1
+    berryc pointer_focus
+
+alt + b
+    {$HOME/.config/berry/scripts/info.sh, pkill info.sh && pkill dunst}
+
+alt + space
+    pkill dunst
+
+alt + a
+  {trayer, pkill trayer}
+
+alt + shift + q
+  pkill berry
+
+alt + shift + r
+    bash $HOME/.config/berry/autostart

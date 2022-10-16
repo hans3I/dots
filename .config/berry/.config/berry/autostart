@@ -1,0 +1,34 @@
+#!/bin/bash
+
+# Set decoration geometry
+berryc border_width       0
+berryc inner_border_width 0
+berryc title_height       30
+berryc top_gap            0
+
+# Set decoration colors
+berryc focus_color         323437 
+berryc unfocus_color       323437
+berryc inner_focus_color   323437 
+berryc inner_unfocus_color 323437 
+berryc text_focus_color    ffffff
+berryc text_unfocus_color  949494
+
+# Other options
+berryc smart_place "true"
+berryc draw_text   "true"
+berryc edge_lock   "false"
+berryc set_font    "Fantasque Sans Mono-9"
+
+sxhkd -c "$HOME/.config/berry/sxhkdrc" &
+
+~/.fehbg &
+
+#picom --config ~/.config/bspwm/picom.conf &
+picom &
+
+nm-applet &
+dunst &
+
+xsetroot -cursor_name left_ptr &
+setxkbmap -option caps:swapescape &

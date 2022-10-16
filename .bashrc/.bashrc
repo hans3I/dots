@@ -10,6 +10,7 @@ export PATH="$HOME/.local/bin/:$PATH"
 export MICRO_TRUECOLOR=1
 
 # Aliases
+alias l='clear'
 alias gl='git clone --depth 1 -v'
 alias gp='git push -v'
 alias ga='git add -v .'
@@ -24,6 +25,7 @@ alias mv='printf "\033[1;34m" && mv -v'
 alias mkdir='printf "\033[1;33m" && mkdir -v'
 alias rmdir='printf "\033[1;35m" && rmdir -v'
 
-bunnyfetch
+#bunnyfetch
+cfetch
 eval "$(starship init bash)"
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml

@@ -1,0 +1,270 @@
+#!/usr/bin/env sh
+
+# SPDX-License-Identifier: MIT
+
+# shellcheck disable=SC3028,SC2166,SC2009,SC2034,SC2086
+
+# Disable UTF-8 to speeds up script execution.
+export LANG='POSIX'
+
+# Parse kernel, version, and machine architecture.
+for STRING in $(uname -mrs); do
+  N=$((N+1))
+  case "$N" in
+    1) KERN="$STRING"
+    ;;
+    2) KVER="$STRING"
+    ;;
+    3) MACH="$STRING"
+    ;;
+  esac
+done
+
+# Determine current OS.
+case "$KERN" in
+  Linux|GNU*|*BSD|DragonFly|Bitrig)
+  ;;
+  *) echo 'Unknown OS detected!' \
+          "'${KERN}' currently not supported yet." >&2
+     exit 1
+  ;;
+esac
+
+getUser() {
+
+  # Get hostname. $HOST > $HOSTNAME > `hostname` > `uname -n`
+  HOST="${HOST:-${HOSTNAME:-$(hostname 2>/dev/null)}}"
+
+  # Show hostname and active-user information. $USER > `id -nu`
+  printf "${c4}%s${c1}@${c2}%s" "${USER:-$(id -nu)}" "${HOST:-$(uname -n)}"
+
+}
+
+getDistro() {
+
+  # Parse OSes identification-data.
+  if [ -f '/bedrock/etc/bedrock-release' -a -z "$BEDROCK_RESTRICT" ]; then
+    PRETTY_NAME='Bedrock Linux'
+  else
+    # shellcheck source=/etc/os-release source=/usr/lib/os-release
+    for FILE in /etc/os-release /usr/lib/os-release; do
+      [ -f "$FILE" ] && . "$FILE" && break
+    done
+  fi
+
+  # Show OS name and built-architecture information. $PRETTY_NAME > $NAME
+  printf "${c5}${*}  ${rs}%s %s" "${PRETTY_NAME:-${NAME:-Unknown}}" "$MACH"
+
+}
+
+getKernel() {
+
+  # Show currently booted kernel information.
+  printf "${c5}${*}  ${rs}%s" "${KVER:-Unknown}"
+
+}
+
+getWM() {
+
+  # Get current DE sessions through available environment variables,
+  # `xprop` is as fallback for EWMH-compliant WMs.
+  if [ -n "$XDG_CURRENT_DESKTOP" -o -n "$DESKTOP_SESSION" ]; then
+    DE="${XDG_CURRENT_DESKTOP#*:-"${DESKTOP_SESSION##*/}"}"
+  elif [ -n "$GNOME_DESKTOP_SESSION_ID" ]; then
+    DE='GNOME'
+  elif [ -n "$MATE_DESKTOP_SESSION_ID" ]; then
+    DE='MATE'
+  elif [ -n "$TDE_FULL_SESSION" ]; then
+    DE='Trinity'
+  elif [ -x "$(command -v xprop)" ]; then
+    XPROP_ID="$(xprop -root -notype _NET_SUPPORTING_WM_CHECK)"
+    XPROP_WM="$(xprop -id "${XPROP_ID##*#\ }" -notype _NET_WM_NAME)"
+    WM="${XPROP_WM##*_NET_WM_NAME\ =\ \"}"
+    WM="${WM%%\"*}"
+  fi
+
+  # Fallback via process checker for unavailable DEs and non EWMH-compliant WMs.
+  if [ -z "${DE:-${WM}}" ]; then
+
+    case "$KERN" in
+      *OpenBSD*) PS_FLAGS='x -c'
+      ;;
+      *        ) PS_FLAGS='-e'
+      ;;
+    esac
+
+    WM="$(ps ${PS_FLAGS} | grep -m1 -Fo \
+                                -e arcan \
+                                -e asc \
+                                -e clayland \
+                                -e dwc \
+                                -e fireplace \
+                                -e gnome-shell \
+                                -e greenfield \
+                                -e grefsen \
+                                -e hikari \
+                                -e kwin \
+                                -e lipstick \
+                                -e maynard \
+                                -e mazecompositor \
+                                -e motorcar \
+                                -e orbital \
+                                -e orbment \
+                                -e perceptia \
+                                -e river \
+                                -e rustland \
+                                -e sway \
+                                -e ulubis \
+                                -e velox \
+                                -e wavy \
+                                -e way-cooler \
+                                -e wayfire \
+                                -e wayhouse \
+                                -e westeros \
+                                -e westford \
+                                -e weston
+    )"
+
+  fi
+
+  # Show DE/WMs session information. $DE > $WM
+  printf "${c5}${*}  ${rs}%s" "${DE:-${WM:-Unknown}}"
+
+}
+
+getPackages() {
+
+  # Verify system-installed package manager.
+  for PM in apt \
+            dnf \
+            emerge \
+            flatpak \
+            nix-env \
+            pacman \
+            rpm \
+            xbps-query \
+            kiss
+  do
+    [ -x "$(command -v "$PM")" ] && PKG_MANAGER="${PKG_MANAGER} ${PM}"
+  done
+
+  # Count installed packages for each package manager.
+  for MANAGER in ${PKG_MANAGER#\ }; do
+
+    # Get/query installed packages.
+    # Note that if the system contains directories of installed packages,
+    # it's highly recommended to use glob as `emerge` below. Assign PKG_XCPT
+    # to reduce TOTAL_PKGS if any unexpected files are included by globs.
+    case "$MANAGER" in
+      apt       ) GET_PKGS='/var/lib/dpkg/info/*.list'
+      ;;
+      dnf       ) GET_PKGS="$(dnf list installed)"
+      ;;
+      emerge    ) GET_PKGS='/var/db/pkg/*/*'
+      ;;
+      flatpak   ) GET_PKGS="$(flatpak --columns=app list)"
+      ;;
+      nix-env   ) GET_PKGS="$(nix-store -q --requisites /run/current-system/sw)"
+                  # Make the NixOS package manager as "nix" to make it even better (?)
+                  MANAGER='nix'
+      ;;
+      pacman    ) GET_PKGS='/var/lib/pacman/local/[0-9a-z]*'
+                  # This already exclude 'ALPM_DB_VERSION' files get included by globs.
+      ;;
+      rpm       ) GET_PKGS="$(rpm -qa --last)"
+      ;;
+      xbps-query) GET_PKGS='/var/db/xbps/.*'
+      ;;
+      kiss      ) GET_PKGS='/var/db/kiss/installed/*'
+      ;;
+    esac
+
+    # Count all queried packages.
+    TOTAL_PKGS="$(($(set -- ${GET_PKGS}; echo "${#}") - PKG_XCPT))"
+
+    # If only zero or one package is installed,
+    # make the package manager looks unrecognized.
+    case "$TOTAL_PKGS" in
+      0|1) TOTAL_PKGS='?'
+           MANAGER='Unknown'
+      ;;
+    esac
+
+    # Preserve information across package managers.
+    PKGS_INFO="${PKGS_INFO}${TOTAL_PKGS} (${MANAGER}), "
+
+  done
+
+  # Show packages information.
+  printf "${c5}${*}  ${rs}%s" "${PKGS_INFO%,\ }"
+
+}
+
+getUptime() {
+
+  # Parse the system-uptime since boot.
+  IFS=. read -r s _ </proc/uptime
+
+  # Convert uptime into readable value.
+  d="$((s / 60 / 60 / 24))"
+  h="$((s / 60 / 60 % 24))"
+  m="$((s / 60 % 60))"
+
+  # Plurals.
+  [ "$d" -gt 1 ] && dp=s
+  [ "$h" -gt 1 ] && hp=s
+  [ "$m" -gt 1 ] && mp=s
+  [ "$s" -gt 1 ] && sp=s
+
+  # Hide empty fields and make the output of uptime smaller.
+  [ "$d" -eq 0 ] || UPTIME="${d} day${dp}, "
+  [ "$h" -eq 0 ] || UPTIME="${UPTIME}${h} hour${hp}, "
+  [ "$m" -eq 0 ] || UPTIME="${UPTIME}${m} min${mp}"
+  [  -n  "$m"  ] || UPTIME="${UPTIME}${s} sec${sp}"
+
+  # Show system-uptime information.
+  printf "${c5}${*}  ${rs}%s" "${UPTIME%,\ }"
+
+}
+
+getPalette() {
+
+  # Print color palette using escape sequences with custom glyph.
+  printf "\033[9%sm${*}  \033[0m" 1 2 3 4 5 6
+
+}
+
+# ANSI colour sequences.
+bo='\033[1m'     # Bold.
+c0='\033[30m'    # Black.
+c1='\033[31m'    # Red.
+c2='\033[32m'    # Green.
+c3='\033[33m'    # Yellow.
+c4='\033[34m'    # Blue.
+c5='\033[35m'    # Magenta.
+c6='\033[36m'    # Cyan.
+c7='\033[37m'    # White.
+c8='\033[90m'    # Grey.
+rs='\033[0m'     # Reset.
+bb="${bo} ${c4}" # Bold blue.
+bg="${bo} ${c2}" # Bold green.
+
+# Print ASCII coffee and relax.
+printf                 "
+${bb}    ) )     ${bo}%s
+${bb}   ( (      ${rs}%s
+${bg} ........   ${rs}%s
+${bg} |      |]  ${rs}%s
+${bg} \      /   ${rs}%s
+${bg}  '____'    ${rs}%s
+             %s      \n" \
+"$(getUser            )" \
+"$(getDistro     ''  )" \
+"$(getKernel     ''  )" \
+"$(getWM         ''  )" \
+"$(getPackages   ''  )" \
+"$(getUptime     ''  )" \
+"$(getPalette    ''  )"
+
+exit ${?}
+# vim:ft=sh:nowrap

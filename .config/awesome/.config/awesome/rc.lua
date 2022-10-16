@@ -15,7 +15,6 @@ local naughty = require("naughty")
 local menubar = require("lib.menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
 local rounded = require("lib.util").shape
-local util = require("lib.util")
 local flash_focus = require("lib.flash_focus")
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:

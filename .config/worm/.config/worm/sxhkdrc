@@ -1,0 +1,63 @@
+#
+# wm independent hotkeys
+#
+
+# terminal emulator
+alt + Return
+	alacritty --config-file ~/.config/worm/alacritty.yml
+
+# program launcher
+alt + d
+	rofi -show drun
+
+# make sxhkd reload its configuration files:
+alt + r
+	pkill -USR1 -x sxhkd
+
+# screenshot
+alt + s
+  screenshot
+
+#
+# berry hotkeys
+#
+# Restart worm
+alt + shift + r
+	worm
+
+# Quit worm
+alt + shift + q
+	pkill worm
+
+# Close app
+alt + q
+	wormc close-active-client
+
+# Maximize app
+alt + f
+	wormc maximize-active-client
+
+# Minimize app
+alt + h
+	wormc minimize-active-client
+
+# Tags
+alt + {_, shift + } {1-9}
+	wormc {switch,move-active}-tag {1-9}
+
+# Set master windows
+alt + m
+	wormc master-active
+
+alt + space
+  wormc layout {tiling,floating}
+
+# Float a window
+alt + shift + space
+	wormc float-active
+
+alt + b
+    {$HOME/.config/berry/scripts/info.sh, pkill info.sh && pkill dunst}
+
+alt + a
+  {trayer, pkill trayer}

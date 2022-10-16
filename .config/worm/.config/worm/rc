@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+exec sxhkd -c ~/.config/worm/sxhkdrc &
+exec ~/.fehbg &
+exec picom &
+exec nm-applet &
+exec dunst &
+exec xsetroot -cursor_name left_ptr &
+exec setxkbmap -option caps:swapescape &
+
+wormc frame-active-pixel $((16#FF383C4A))
+wormc frame-inactive-pixel $((16#FF383C4A)) # todo: diff color for active window (the bug here was fixed, this works now)
+wormc frame-center T
+wormc text-font 'Fantasque Sans Mono:size=10'
+wormc frame-right 'I;M;'
+wormc button-offset 5 7
+wormc minimize-path ~/.config/worm/buttons/minimize.png
+wormc maximize-path ~/.config/worm/buttons/maximize.png
+wormc button-size 16
+wormc border-width 2
+wormc border-active-pixel $((16#FF5294e2))
+wormc border-inactive-pixel $((16#FF7c818c))
+wormc struts 10 10 10 10
+wormc gaps 10
+wormc layout floating
