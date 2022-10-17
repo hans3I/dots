@@ -7,8 +7,9 @@ exec nm-applet &
 exec dunst &
 exec xsetroot -cursor_name left_ptr &
 exec setxkbmap -option caps:swapescape &
-exec tint2 -c ~/.config/tint2/tint2rc &
+exec tint2 -c ~/.config/tint2/tint2rcleft &
 exec tint2 -c ~/.config/tint2/tint2rcright &
+exec tint2 &
 
 wormc frame-active-pixel $((16#FF414868))
 wormc frame-inactive-pixel $((16#FF414868)) # todo: diff color for active window (the bug here was fixed, this works now)
@@ -24,7 +25,7 @@ wormc button-size 20
 wormc border-width 0
 wormc border-active-pixel $((16#FF5294e2))
 wormc border-inactive-pixel $((16#FF7c818c))
-wormc struts 15 70 15 15
+wormc struts 15 55 15 15
 wormc gaps 15
 wormc layout floating
-wormc focus-mode 2
+#wormc focus-mode 2

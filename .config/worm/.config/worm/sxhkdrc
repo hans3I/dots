@@ -38,8 +38,8 @@ alt + f
 	wormc maximize-active-client
 
 # Minimize app
-alt + h
-	wormc minimize-active-client
+#alt + h
+#	wormc minimize-active-client
 
 # Tags
 alt + {_, shift + } {1-9}
@@ -60,4 +60,4 @@ alt + b
     {$HOME/.config/berry/scripts/info.sh, pkill info.sh && pkill dunst}
 
 alt + a
-  {trayer, pkill trayer}
+    {$TERM --config-file ~/.config/worm/alacritty.yml -e alsamixer, pkill alsa}

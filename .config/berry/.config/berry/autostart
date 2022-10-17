@@ -7,12 +7,12 @@ berryc title_height       30
 berryc top_gap            0
 
 # Set decoration colors
-berryc focus_color         323437 
-berryc unfocus_color       323437
-berryc inner_focus_color   323437 
-berryc inner_unfocus_color 323437 
-berryc text_focus_color    ffffff
-berryc text_unfocus_color  949494
+berryc focus_color         414868 
+berryc unfocus_color       414868 
+berryc inner_focus_color   414868 
+berryc inner_unfocus_color 414868 
+berryc text_focus_color    c0caf5 
+berryc text_unfocus_color  8188a6 
 
 # Other options
 berryc smart_place "true"
@@ -25,10 +25,13 @@ sxhkd -c "$HOME/.config/berry/sxhkdrc" &
 ~/.fehbg &
 
 #picom --config ~/.config/bspwm/picom.conf &
-picom &
 
 nm-applet &
 dunst &
 
 xsetroot -cursor_name left_ptr &
 setxkbmap -option caps:swapescape &
+
+tint2 -c ~/.config/tint2/tint2rcleft &
+tint2 -c ~/.config/tint2/tint2rcright &
+tint2 &
