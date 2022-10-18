@@ -96,7 +96,7 @@ hc keybind $Mod-p pseudotile toggle
 # I.e. if there are two windows within a frame, the grid layout is skipped.
 hc keybind $Mod-space                                                           \
             or , and . compare tags.focus.curframe_wcount = 2                   \
-                     . cycle_layout +1 horizontal vertical max horizontal       \
+                     . cycle_layout +1 vertical horizontal max vertical grid    \
                , cycle_layout +1
 
 # mouse
@@ -115,15 +115,15 @@ hc keybind $Mod-i jumpto urgent
 # theme
 hc attr theme.tiling.reset 1
 hc attr theme.floating.reset 1
-hc set frame_border_active_color '#00000000'
-hc set frame_border_normal_color '#32374a4d'
-hc set frame_bg_normal_color '#00000000'
-hc set frame_bg_active_color '#32374a4d'
-hc set frame_border_width 0
+hc set frame_border_active_color '#222222cc'
+hc set frame_border_normal_color '#101010cc'
+hc set frame_bg_normal_color '#565656aa'
+hc set frame_bg_active_color '#345F0Caa'
+hc set frame_border_width 1
 hc set show_frame_decorations 'focused_if_multiple'
 hc set frame_bg_transparent on
 hc set frame_transparent_width 5
-hc set frame_gap 15
+hc set frame_gap 4
 
 hc attr theme.padding_left 35
 hc attr theme.title_height 15
@@ -131,36 +131,36 @@ hc attr theme.title_when never
 hc attr theme.title_font 'Dejavu Sans:pixelsize=12'  # example using Xft
 # hc attr theme.title_font '-*-fixed-medium-r-*-*-13-*-*-*-*-*-*-*'
 hc attr theme.title_depth 3  # space below the title's baseline
-hc attr theme.active.color '#414868'
+hc attr theme.active.color '#345F0Cef'
 hc attr theme.title_color '#ffffff'
-hc attr theme.normal.color '#32374a'
+hc attr theme.normal.color '#323232dd'
 hc attr theme.urgent.color '#7811A1dd'
 hc attr theme.tab_color '#1F1F1Fdd'
 hc attr theme.active.tab_color '#2B4F0Add'
 hc attr theme.active.tab_outer_color '#6C8257dd'
 hc attr theme.active.tab_title_color '#ababab'
 hc attr theme.normal.title_color '#898989'
-hc attr theme.inner_width 0
+hc attr theme.inner_width 1
 hc attr theme.inner_color black
 hc attr theme.border_width 3
 hc attr theme.floating.border_width 4
-hc attr theme.floating.outer_width 0
+hc attr theme.floating.outer_width 1
 hc attr theme.floating.outer_color black
-hc attr theme.active.inner_color '#c0caf5'
+hc attr theme.active.inner_color '#789161'
 hc attr theme.urgent.inner_color '#9A65B0'
-hc attr theme.normal.inner_color '#8188a6'
-# copy title color to inner color
-#for state in active urgent normal ; do
-#    hc substitute C theme.${state}.title_color \
-#        attr theme.${state}.inner_color C
-#done
-hc attr theme.tiling.outer_width 0
+hc attr theme.normal.inner_color '#606060'
+# copy inner color to outer_color
+for state in active urgent normal ; do
+    hc substitute C theme.${state}.inner_color \
+        attr theme.${state}.outer_color C
+done
+hc attr theme.tiling.outer_width 1
 hc attr theme.background_color '#141414'
 
-hc set window_gap 15
-hc set frame_padding -10
+hc set window_gap 0
+hc set frame_padding 0
 hc set smart_window_surroundings off
-hc set smart_frame_surroundings off
+hc set smart_frame_surroundings on
 hc set mouse_recenter_gap 0
 
 # rules
@@ -186,19 +186,10 @@ hc unlock
 # or simply:
 # hc detect_monitors
 
-
-# autostart
-~/.fehbg &
-
-nm-applet &
-dunst &
-picom &
-
-xsetroot -cursor_name left_ptr &
-setxkbmap -option caps:swapescape &
-
-tint2 -c ~/.config/tint2/tint2rcleft &
-tint2 -c ~/.config/tint2/tint2rcright &
-tint2 &
-
-herbstclient floating
+# find the panel
+panel=~/.config/herbstluftwm/panel.sh
+[ -x "$panel" ] || panel=/etc/xdg/herbstluftwm/panel.sh
+for monitor in $(hc list_monitors | cut -d: -f1) ; do
+    # start it on each monitor
+    "$panel" "$monitor" &
+done
