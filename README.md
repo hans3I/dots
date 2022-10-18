@@ -1,15 +1,19 @@
 <h1 align="center">Dotfiles</h1>
 
+## AwesomeWM preview
 <p align="center">
-  <img src="preview.png">
+  <img src="preview-awesome.png">
 </p>
 
-## Installation
+## HerbstluftWM preview
+<p align="center">
+  <img src="preview-herbstluft.png">
+</p>
 
 - Suggested packages, just to make sure everything works properly
 
     ```
-    awesome alacritty firefox bash nvim picom
+    stow awesome berry bspwm herbstluftwm alacritty urxvt dunst starship tint2 worm firefox bash neovim picom
     ```
 
 </details>
@@ -30,20 +34,19 @@
 | **[Software]**                       | **Function**               |
 | Alt + p                              | screenshot(using scrot)    |
 | Alt + d                              | launcher                   |
-| Alt + Return                         | alacritty                      |
+| Alt + Return                         | alacritty / urxvt          |
 |                                      |                            |
 | **[AwesomeWM]**                      | **Function**               |
-| F1                                   | show keybindings           |
-| Alt + s                              | toggle systray             |
+| F1                                   | show keybindings [awesome] |
+| Alt + s                              | systray [awesome]          |
 | Alt + q                              | kill focused window        |
 | Alt + e                              | toggle fullscreen          |
-| Alt + space                          | toggle floating/tiling     |
 | Alt + j/k                            | toggle window focus        |
-| Alt + h/l                            | resize window              |
+| Alt + h/l                            | resize                     |
 | Alt + [1-9]                          | focus desktop 1-9          |
 | Alt + Shift + [1-9]                  | move window to desktop 1-9 |
-| Alt + Shift + q                      | quit awesomewm             |
-| Alt + Shift + r                      | restart awesomewm          |
+| Alt + Shift + q                      | quit wm                    |
+| Alt + Shift + r                      | restart wm                 |
 
 
 ## Project references
