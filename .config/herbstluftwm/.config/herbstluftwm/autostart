@@ -24,6 +24,7 @@ hc keybind $Mod-Shift-r reload
 hc keybind $Mod-q       close
 hc keybind $Mod-Return  spawn $Terminal # use your $TERMINAL with xterm as fallback
 hc keybind $Mod-d       spawn rofi -show drun # use your $TERMINAL with xterm as fallback
+hc keybind $Mod-p       spawn screenshot # use your $TERMINAL with xterm as fallback
 hc keybind $Mod-a       spawn $Terminal -e alsamixer # use your $TERMINAL with xterm as fallback
 
 # basic movement in tiling and floating mode
@@ -91,7 +92,7 @@ hc keybind $Mod-Shift-s set_attr clients.focus.floating toggle
 #hc keybind $Mod-Shift-d set_attr clients.focus.decorated toggle
 hc keybind $Mod-n       set_attr clients.focus.minimized true
 hc keybind $Mod-Shift-n jumpto last-minimized
-hc keybind $Mod-p pseudotile toggle
+hc keybind $Mod-t pseudotile toggle
 # The following cycles through the available layouts within a frame, but skips
 # layouts, if the layout change wouldn't affect the actual window positions.
 # I.e. if there are two windows within a frame, the grid layout is skipped.
