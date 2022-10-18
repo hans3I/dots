@@ -13,7 +13,7 @@
 - Suggested packages, just to make sure everything works properly
 
     ```
-    stow awesome berry bspwm herbstluftwm alacritty urxvt dunst starship tint2 worm firefox bash neovim picom
+    stow awesome berry bspwm herbstluftwm alacritty urxvt dunst starship tint2 worm firefox bash neovim picom xclip feh
     ```
 
 </details>
@@ -32,7 +32,7 @@
 | Key                                  | Function                   |
 | -----                                | -----                      |
 | **[Software]**                       | **Function**               |
-| Alt + p                              | screenshot(using scrot)    |
+| Alt + p                              | screenshot(scrot & xclip)  |
 | Alt + d                              | launcher                   |
 | Alt + Return                         | alacritty / urxvt          |
 |                                      |                            |
