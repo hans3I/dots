@@ -52,3 +52,4 @@
 ## Project references
   - Colorscheme: [Tokyonight](https://github.com/folke/tokyonight.nvim)
   - Nvim: [Conscious](https://github.com/manas140/conscious)
+  - Nvim: [nvim-basic-ide](https://github.com/LunarVim/nvim-basic-ide)
