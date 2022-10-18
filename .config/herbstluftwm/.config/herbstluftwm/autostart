@@ -17,13 +17,14 @@ hc keyunbind --all
 # if you have a super key you will be much happier with Mod set to Mod4
 Mod=Mod1    # Use alt as the main modifier
 #Mod=Mod4   # Use the super key as the main modifier
+Terminal=urxvt
 
 hc keybind $Mod-Shift-q quit
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-q       close
-hc keybind $Mod-Return  spawn "${TERMINAL:-xterm}" # use your $TERMINAL with xterm as fallback
+hc keybind $Mod-Return  spawn $Terminal # use your $TERMINAL with xterm as fallback
 hc keybind $Mod-d       spawn rofi -show drun # use your $TERMINAL with xterm as fallback
-hc keybind $Mod-a       spawn $TERMINAL -e alsamixer # use your $TERMINAL with xterm as fallback
+hc keybind $Mod-a       spawn $Terminal -e alsamixer # use your $TERMINAL with xterm as fallback
 
 # basic movement in tiling and floating mode
 # focusing clients
@@ -85,8 +86,8 @@ hc keybind $Mod-comma  use_index -1 --skip-visible
 # layouting
 hc keybind $Mod-r remove
 hc keybind $Mod-s floating toggle
-hc keybind $Mod-f fullscreen toggle
-#hc keybind $Mod-Shift-f set_attr clients.focus.floating toggle
+hc keybind $Mod-e fullscreen toggle
+hc keybind $Mod-Shift-s set_attr clients.focus.floating toggle
 #hc keybind $Mod-Shift-d set_attr clients.focus.decorated toggle
 hc keybind $Mod-n       set_attr clients.focus.minimized true
 hc keybind $Mod-Shift-n jumpto last-minimized
@@ -115,10 +116,10 @@ hc keybind $Mod-i jumpto urgent
 # theme
 hc attr theme.tiling.reset 1
 hc attr theme.floating.reset 1
-hc set frame_border_active_color '#00000000'
+hc set frame_border_active_color '#414868'
 hc set frame_border_normal_color '#32374a4d'
-hc set frame_bg_normal_color '#00000000'
-hc set frame_bg_active_color '#32374a4d'
+hc set frame_bg_normal_color '#32374a4d'
+hc set frame_bg_active_color '#414868'
 hc set frame_border_width 0
 hc set show_frame_decorations 'focused_if_multiple'
 hc set frame_bg_transparent on
@@ -158,7 +159,7 @@ hc attr theme.tiling.outer_width 0
 hc attr theme.background_color '#141414'
 
 hc set window_gap 15
-hc set frame_padding -10
+hc set frame_padding -15
 hc set smart_window_surroundings off
 hc set smart_frame_surroundings off
 hc set mouse_recenter_gap 0
@@ -192,13 +193,13 @@ hc unlock
 
 nm-applet &
 dunst &
-picom &
+#picom &
 
 xsetroot -cursor_name left_ptr &
 setxkbmap -option caps:swapescape &
 
-tint2 -c ~/.config/tint2/tint2rcleft &
-tint2 -c ~/.config/tint2/tint2rcright &
-tint2 &
+#tint2 -c ~/.config/tint2/tint2rcleft &
+tint2 -c ~/.config/tint2/leftrc &
+tint2 -c ~/.config/tint2/rightrc &
 
 herbstclient floating

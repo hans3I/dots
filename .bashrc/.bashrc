@@ -6,7 +6,7 @@ PS1='\033[1;32m\w\033[0;0m '
 
 #Exports 
 export BROWSER=/bin/firefox
-export TERMINAL=/usr/bin/alacritty
+export TERMINAL=/bin/urxvt
 export PATH="$HOME/.local/bin/:$PATH"
 export MICRO_TRUECOLOR=1
 

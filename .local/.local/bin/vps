@@ -1,0 +1,14 @@
+DIR1=$HOME/.git/void-packages/
+DIR2=$HOME/.git/void-packages/srcpkgs
+
+cd "$DIR1" || exit
+git pull
+
+cd "$DIR2" || exit
+if [[ -d "$1" ]]
+  then
+    cd "$DIR1" || exit
+    ./xbps-src pkg "$1" && xi "$1"
+  else
+    printf "Not found"
+fi
