@@ -50,7 +50,7 @@ end
 beautiful.init(string.format("%s/.config/awesome/theme/theme.lua", os.getenv("HOME")))
 
 -- This is used later as the default terminal and editor to run.
-terminal = "alacritty"
+terminal = "urxvt"
 editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 

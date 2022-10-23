@@ -190,7 +190,7 @@ hc unlock
 
 
 # autostart
-~/.fehbg &
+feh --bg-fill ~/.config/herbstluftwm/dark-wave-ocean-muted.png &
 
 nm-applet &
 dunst &
