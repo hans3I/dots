@@ -1,0 +1,88 @@
+* {
+    border: 0;
+    border-radius: 0;
+    font-family: Liga SFMono Nerd Font;
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    color: white;
+}
+
+tooltip {
+	background: #0f0f0f;
+	border-radius: 15px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #262626;
+}
+
+#workspaces button {
+    padding: 5px 10px;
+    color: #cba6f7;
+}
+
+#workspaces button.focused {
+    color: #161616;
+    background-color: #c49ec4;
+    border-radius: 15px;
+}
+
+#workspaces button.urgent {
+    color: #161616;
+    background-color: #9ec3c4;
+    border-radius: 15px;
+}
+
+#workspaces button:hover {
+	background-color: #c49ec4;
+	color: #161616;
+	border-radius: 15px;
+}
+
+#custom-date, #taskbar, #clock, #pulseaudio, #workspaces, #tray {
+	background-color: #181825;
+	padding: 5px 10px;
+	margin: 10px 0px;
+}
+
+#workspaces {
+	background-color: #161616;
+	border-radius: 15px 0px 0px 15px;
+}
+
+#custom-date {
+  color: #31748f;
+}
+#tray {
+  color: #c4a7e7;
+  border-radius: 0px 15px 15px 0px;
+  padding-right: 20px;
+  padding-left: 15px;
+}
+#clock {
+  color: #c4a7e7;
+}
+
+#taskbar {
+	background-color: #161616;
+  padding-right: 15px;
+  padding-left: 0px;
+}
+
+#taskbar button:hover {
+	background-color: #c49ec4;
+	color: #0f0f0f;
+	border-radius: 15px;
+}
+
+#taskbar button.active {
+  background-color: #181825;
+	border-radius: 5px;
+}
+#pulseaudio {
+  padding-left: 20px;
+	color: #9ccfd8;
+}

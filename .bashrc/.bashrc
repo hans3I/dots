@@ -5,6 +5,7 @@
 PS1='\033[1;32m\w\033[0;0m '
 
 #Exports 
+export XKB_DEFAULT_OPTIONS=caps:escape
 export BROWSER=/bin/firefox
 export TERMINAL=/bin/urxvt
 export PATH="$HOME/.local/bin/:$PATH"

@@ -230,7 +230,7 @@ getUptime() {
 getPalette() {
 
   # Print color palette using escape sequences with custom glyph.
-  printf "\033[9%sm${*}  \033[0m" 1 2 3 4 5 6
+  printf "\033[9%sm${*}\033[0m" 1 2 3 4 5 6
 
 }
 
@@ -265,7 +265,7 @@ ${bg}  '____'    ${rs}%s
 "$(getWM         ''  )" \
 "$(getPackages   ''  )" \
 "$(getUptime     ''  )" \
-"$(getPalette    ''  )"
+"$(getPalette    '▁▁▁'  )"
 
 exit ${?}
 # vim:ft=sh:nowrap
