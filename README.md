@@ -10,10 +10,15 @@
   <img src="preview-herbstluft.png">
 </p>
 
+## DWM preview
+<p align="center">
+  <img src="preview-dwm.png">
+</p>
+
 - Suggested packages, just to make sure everything works properly
 
     ```
-    stow awesome berry bspwm herbstluftwm alacritty urxvt dunst starship tint2 worm firefox bash neovim picom xclip feh
+    stow awesome berry bspwm herbstluftwm alacritty urxvt dunst starship tint2 worm firefox bash neovim picom xclip feh [picom-animations](https://github.com/dccsillag/picom)
     ```
 
 </details>
