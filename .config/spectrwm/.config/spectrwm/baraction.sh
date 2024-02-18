@@ -4,17 +4,18 @@ bat() {
 	batstat0="$(cat /sys/class/power_supply/BAT0/status)"
 	battery0="$(cat /sys/class/power_supply/BAT0/capacity)"
 	if [ $batstat = 'Charging' ]; then
-		batstat="(+)"
+		batstat="+"
     else
-    batstat="(~)"
+    batstat="~"
 	fi
 
 	if [ $batstat0 = 'Charging' ]; then
-		batstat0="(+)"
+		batstat0="+"
     else
-    batstat0="(~)"
+    batstat0="~"
 	fi
-	echo "+@fg=4;+@fg=9;+@bg=4; $batstat$battery% +@fg=2;+@fg=9;+@bg=2; $batstat0$battery0%+@fg=9; +@bg=0;"
+	#echo "+@fg=4;+@fg=9;+@bg=4; $batstat$battery% +@fg=5;+@fg=9;+@bg=5; $batstat0$battery0%+@fg=9; +@bg=0;" #powerline
+	echo "+@fg=4;+@fg=9;+@bg=4; $batstat$battery% +@fg=4;+@bg=0; +@fg=5;+@fg=9;+@bg=5; $batstat0$battery0% +@fg=5;+@bg=0;" 
 }
 
 SLEEP_SEC=0.25
