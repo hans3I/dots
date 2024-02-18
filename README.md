@@ -15,6 +15,11 @@
   <img src="preview-dwm.png">
 </p>
 
+## Spectrwm preview
+<p align="center">
+   <img src="preview-spectrwm.png">
+</p>
+
 - Suggested packages, just to make sure everything works properly
 
     ```
