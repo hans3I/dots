@@ -7,7 +7,7 @@ PS1='\033[1;32m\w\033[0;0m '
 #Exports 
 export XKB_DEFAULT_OPTIONS=caps:escape
 export BROWSER=/bin/firefox
-export TERMINAL=/bin/urxvt
+export TERMINAL=/bin/alacritty
 export PATH="$HOME/.local/bin/:$PATH"
 export MICRO_TRUECOLOR=1
 
@@ -19,8 +19,9 @@ alias gl='git clone --depth 1 -v'
 alias gp='git push -v'
 alias ga='git add -v .'
 alias gc='git commit -vm "updates"'
-alias ls='ls --color=auto -t'
-alias la='ls --color=auto -ta'
+alias xs='exa --icons --color=auto -ta'
+alias xa='exa --icons --color=auto -laG'
+alias xe='exa --icons --color=auto --tree -la'
 alias open='xdg-open'
 alias sudo='sudo -p "$(printf "\033[1;31mPassword: \033[0;0m" )"'
 alias rm='printf "\033[1;31m" && rm -rv'
@@ -29,8 +30,9 @@ alias mv='printf "\033[1;34m" && mv -v'
 alias mkdir='printf "\033[1;33m" && mkdir -v'
 alias rmdir='printf "\033[1;35m" && rmdir -v'
 alias vpm='vpm --color=yes'
+alias neofetch='fastfetch'
 
 #bunnyfetch
-cfetch
+fastfetch
 eval "$(starship init bash)"
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
