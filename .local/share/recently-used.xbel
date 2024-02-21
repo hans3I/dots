@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="file:///home/hansel/Github" added="2024-02-21T12:48:23.509780Z" modified="2024-02-21T12:53:59.655413Z" visited="2024-02-21T12:48:23.509782Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="Thunar" exec="&apos;thunar %u&apos;" modified="2024-02-21T12:53:59.655409Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hansel/Github/dots" added="2024-02-21T12:48:26.821081Z" modified="2024-02-21T12:54:00.954020Z" visited="2024-02-21T12:48:26.821083Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="Thunar" exec="&apos;thunar %u&apos;" modified="2024-02-21T12:54:00.954016Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hansel/.local" added="2024-02-21T12:50:09.030890Z" modified="2024-02-21T12:50:09.030895Z" visited="2024-02-21T12:50:09.030891Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="Thunar" exec="&apos;thunar %u&apos;" modified="2024-02-21T12:50:09.030893Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="computer:///" added="2024-02-21T12:50:12.219487Z" modified="2024-02-21T12:50:12.219491Z" visited="2024-02-21T12:50:12.219488Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="Thunar" exec="&apos;thunar %u&apos;" modified="2024-02-21T12:50:12.219489Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hansel" added="2024-02-21T12:50:12.733888Z" modified="2024-02-21T12:50:12.733901Z" visited="2024-02-21T12:50:12.733890Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="Thunar" exec="&apos;thunar %u&apos;" modified="2024-02-21T12:50:12.733896Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hansel/Github/dots/.local" added="2024-02-21T12:50:18.822550Z" modified="2024-02-21T12:54:02.404786Z" visited="2024-02-21T12:50:18.822551Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="Thunar" exec="&apos;thunar %u&apos;" modified="2024-02-21T12:54:02.404782Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hansel/Github/dots/.local/bin" added="2024-02-21T12:50:20.188614Z" modified="2024-02-21T12:50:20.188629Z" visited="2024-02-21T12:50:20.188616Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="Thunar" exec="&apos;thunar %u&apos;" modified="2024-02-21T12:50:20.188621Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hansel/Github/dots/.local/bin/Hyprland" added="2024-02-21T12:50:22.341567Z" modified="2024-02-21T12:50:22.341623Z" visited="2024-02-21T12:50:22.341568Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="Thunar" exec="&apos;thunar %u&apos;" modified="2024-02-21T12:50:22.341620Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hansel/Github/dots/.local/bin/hyprctl" added="2024-02-21T12:50:23.527767Z" modified="2024-02-21T12:50:23.527816Z" visited="2024-02-21T12:50:23.527768Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="Thunar" exec="&apos;thunar %u&apos;" modified="2024-02-21T12:50:23.527815Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hansel/Github/dots/.local/bin/bunnyfetch" added="2024-02-21T12:50:26.161490Z" modified="2024-02-21T12:50:26.161630Z" visited="2024-02-21T12:50:26.161491Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="Thunar" exec="&apos;thunar %u&apos;" modified="2024-02-21T12:50:26.161628Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hansel/Github/dots/.local/bin/panes" added="2024-02-21T12:50:26.866193Z" modified="2024-02-21T12:50:26.866229Z" visited="2024-02-21T12:50:26.866194Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="Thunar" exec="&apos;thunar %u&apos;" modified="2024-02-21T12:50:26.866228Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hansel/Github/dots/.local/bin/record" added="2024-02-21T12:50:28.720331Z" modified="2024-02-21T12:50:28.720393Z" visited="2024-02-21T12:50:28.720332Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="Thunar" exec="&apos;thunar %u&apos;" modified="2024-02-21T12:50:28.720391Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hansel/Github/dots/.local/bin/screenshot" added="2024-02-21T12:50:29.542327Z" modified="2024-02-21T12:50:29.542430Z" visited="2024-02-21T12:50:29.542330Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="Thunar" exec="&apos;thunar %u&apos;" modified="2024-02-21T12:50:29.542427Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hansel/Github/dots/.local/share" added="2024-02-21T12:50:36.003909Z" modified="2024-02-21T12:50:36.003922Z" visited="2024-02-21T12:50:36.003910Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="Thunar" exec="&apos;thunar %u&apos;" modified="2024-02-21T12:50:36.003915Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hansel/Github/dots/.local/share/gvfs-metadata" added="2024-02-21T12:50:38.700961Z" modified="2024-02-21T12:50:38.700973Z" visited="2024-02-21T12:50:38.700963Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="Thunar" exec="&apos;thunar %u&apos;" modified="2024-02-21T12:50:38.700967Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hansel/Github/dots/.local/share/gvfs-metadata/root" added="2024-02-21T12:50:39.562682Z" modified="2024-02-21T12:50:39.562688Z" visited="2024-02-21T12:50:39.562682Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="Thunar" exec="&apos;thunar %u&apos;" modified="2024-02-21T12:50:39.562685Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hansel/Github/dots/.config" added="2024-02-21T12:50:48.638112Z" modified="2024-02-21T12:50:48.638125Z" visited="2024-02-21T12:50:48.638114Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="Thunar" exec="&apos;thunar %u&apos;" modified="2024-02-21T12:50:48.638119Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hansel/Github/dots/.config/duns" added="2024-02-21T12:50:51.542811Z" modified="2024-02-21T12:50:58.741704Z" visited="2024-02-21T12:50:51.542812Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="Thunar" exec="&apos;thunar %u&apos;" modified="2024-02-21T12:50:58.741702Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hansel/Github/dots/.config/dunst" added="2024-02-21T12:50:55.244208Z" modified="2024-02-21T12:52:00.597795Z" visited="2024-02-21T12:50:55.244211Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="Thunar" exec="&apos;thunar %u&apos;" modified="2024-02-21T12:52:00.597793Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hansel/Github/dots/.config/," added="2024-02-21T12:51:14.233745Z" modified="2024-02-21T12:51:14.233751Z" visited="2024-02-21T12:51:14.233745Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="Thunar" exec="&apos;thunar %u&apos;" modified="2024-02-21T12:51:14.233748Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hansel/Github/dots/.config/,/.github" added="2024-02-21T12:51:18.790714Z" modified="2024-02-21T12:51:18.790729Z" visited="2024-02-21T12:51:18.790716Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="Thunar" exec="&apos;thunar %u&apos;" modified="2024-02-21T12:51:18.790722Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hansel/Github/dots/.config/,/lua" added="2024-02-21T12:51:21.011849Z" modified="2024-02-21T12:51:21.011861Z" visited="2024-02-21T12:51:21.011850Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="Thunar" exec="&apos;thunar %u&apos;" modified="2024-02-21T12:51:21.011854Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hansel/Github/dots/.config/,/lua/user" added="2024-02-21T12:51:22.673640Z" modified="2024-02-21T12:51:22.673654Z" visited="2024-02-21T12:51:22.673642Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="Thunar" exec="&apos;thunar %u&apos;" modified="2024-02-21T12:51:22.673646Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hansel/Github/dots/.config/alacritty" added="2024-02-21T12:51:42.322673Z" modified="2024-02-21T12:51:42.322678Z" visited="2024-02-21T12:51:42.322674Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="Thunar" exec="&apos;thunar %u&apos;" modified="2024-02-21T12:51:42.322675Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hansel/Github/dots/.config/awesome" added="2024-02-21T12:51:48.565058Z" modified="2024-02-21T12:51:48.565063Z" visited="2024-02-21T12:51:48.565059Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="Thunar" exec="&apos;thunar %u&apos;" modified="2024-02-21T12:51:48.565061Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hansel/Github/dots/.config/dwm" added="2024-02-21T12:51:56.601514Z" modified="2024-02-21T12:51:56.601528Z" visited="2024-02-21T12:51:56.601516Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="Thunar" exec="&apos;thunar %u&apos;" modified="2024-02-21T12:51:56.601521Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hansel/Github/dots/.fonts" added="2024-02-21T12:52:05.814431Z" modified="2024-02-21T12:54:04.574926Z" visited="2024-02-21T12:52:05.814432Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="Thunar" exec="&apos;thunar %u&apos;" modified="2024-02-21T12:54:04.574921Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>
