@@ -1,30 +1,50 @@
 [colors.bright]
-black = "#151720"
-blue = "#86aaec"
-cyan = "#93cee9"
-green = "#90ceaa"
-magenta = "#c296eb"
-red = "#dd6777"
-white = "#cbced3"
-yellow = "#ecd3a0"
+black = "0x6e6a86"
+blue = "0x9ccfd8"
+cyan = "0xebbcba"
+green = "0x31748f"
+magenta = "0xc4a7e7"
+red = "0xeb6f92"
+white = "0xe0def4"
+yellow = "0xf6c177"
 
 [colors.cursor]
-cursor = "#a5b6cf"
-text = "CellForeground"
+cursor = "0x524f67"
+text = "0xe0def4"
+
+[colors.hints.end]
+background = "0x1f1d2e"
+foreground = "0x6e6a86"
+
+[colors.hints.start]
+background = "0x1f1d2e"
+foreground = "0x908caa"
+
+[colors.line_indicator]
+background = "None"
+foreground = "None"
 
 [colors.normal]
-black = "#1c1e27"
-blue = "#8baff1"
-cyan = "#98d3ee"
-green = "#95d3af"
-magenta = "#c79bf0"
-red = "#e26c7c"
-white = "#d0d3d8"
-yellow = "#f1d8a5"
+black = "0x26233a"
+blue = "0x9ccfd8"
+cyan = "0xebbcba"
+green = "0x31748f"
+magenta = "0xc4a7e7"
+red = "0xeb6f92"
+white = "0xe0def4"
+yellow = "0xf6c177"
 
 [colors.primary]
-background = "#0d0f18"
-foreground = "#a5b6cf"
+background = "0x191724"
+foreground = "0xe0def4"
+
+[colors.selection]
+background = "0x403d52"
+text = "0xe0def4"
+
+[colors.vi_mode_cursor]
+cursor = "0x524f67"
+text = "0xe0def4"
 
 [font]
 size = 12

@@ -273,4 +273,24 @@
       </metadata>
     </info>
   </bookmark>
+  <bookmark href="file:///home/hansel/Downloads/blockwavemoon.png" added="2024-02-21T14:07:45.109312Z" modified="2024-02-21T14:07:45.442435Z" visited="2024-02-21T14:07:45.109314Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2024-02-21T14:07:45.442431Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hansel/Downloads/moon.jpg" added="2024-02-21T14:12:41.207685Z" modified="2024-02-21T14:12:41.532451Z" visited="2024-02-21T14:12:41.207688Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2024-02-21T14:12:41.532441Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
 </xbel>

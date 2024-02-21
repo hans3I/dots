@@ -15,7 +15,7 @@ bat() {
     batstat0="~"
 	fi
 	#echo "+@fg=4;+@fg=9;+@bg=4; $batstat$battery% +@fg=5;+@fg=9;+@bg=5; $batstat0$battery0%+@fg=9; +@bg=0;" #powerline
-	echo "+@fg=4;+@fg=9;+@bg=4; $batstat$battery% +@fg=4;+@bg=0; +@fg=5;+@fg=9;+@bg=5; $batstat0$battery0% +@fg=5;+@bg=0;" 
+	echo "+@fg=3;+@fg=9;+@bg=3; $batstat$battery% +@fg=3;+@bg=0; +@fg=5;+@fg=9;+@bg=5; $batstat0$battery0% +@fg=5;+@bg=0;" 
 }
 
 SLEEP_SEC=0.25

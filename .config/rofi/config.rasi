@@ -1,10 +1,10 @@
 configuration{
     modi: "run,drun,window";
     lines: 5;
-    font: "Iosevka 12";
+    font: "Liga SFMono Nerd Font 12";
     show-icons: true;
     icon-theme: "Paper Mono";
-    terminal: "st";
+    terminal: "alacritty";
     drun-display-format: "{icon} {name}";
     location: 0;
     disable-history: false;
@@ -12,7 +12,7 @@ configuration{
     display-drun: "   Apps ";
 }
 
-@theme "gruv"
+@theme "dracula"
 
 element-text, element-icon , mode-switcher {
     background-color: inherit;
