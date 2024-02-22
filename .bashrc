@@ -8,7 +8,7 @@ PS1='\033[1;32m\w\033[0;0m '
 export XKB_DEFAULT_OPTIONS=caps:escape
 export BROWSER=/bin/firefox
 export TERMINAL=/bin/alacritty
-export PATH="$HOME/.local/bin/:$PATH"
+export PATH="$HOME/Bin/:$PATH"
 export MICRO_TRUECOLOR=1
 
 # Aliases
@@ -34,5 +34,6 @@ alias neofetch='fastfetch'
 
 #bunnyfetch
 fastfetch
+eval "$(zoxide init --cmd cd bash)"
 eval "$(starship init bash)"
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
