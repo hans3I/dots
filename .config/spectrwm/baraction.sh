@@ -4,15 +4,19 @@ bat() {
 	batstat0="$(cat /sys/class/power_supply/BAT0/status)"
 	battery0="$(cat /sys/class/power_supply/BAT0/capacity)"
 	if [ $batstat = 'Charging' ]; then
-		batstat="+"
-    else
-    batstat="~"
+		batstat="󱟦 "
+	elif [ $batstat = 'Full' ]; then
+		batstat="󱟢 "
+  else
+    batstat="󱟤 "
 	fi
 
 	if [ $batstat0 = 'Charging' ]; then
-		batstat0="+"
-    else
-    batstat0="~"
+		batstat0="󱟦 "
+	elif [ $batstat = 'Full' ]; then
+		batstat="󱟢 "
+  else
+    batstat0="󱟤 "
 	fi
 	#echo "+@fg=4;+@fg=9;+@bg=4; $batstat$battery% +@fg=5;+@fg=9;+@bg=5; $batstat0$battery0%+@fg=9; +@bg=0;" #powerline
 	echo "+@fg=3;+@fg=7;+@bg=3; $batstat$battery% +@fg=3;+@bg=0; +@fg=5;+@fg=7;+@bg=5; $batstat0$battery0% +@fg=5;+@bg=0;" 

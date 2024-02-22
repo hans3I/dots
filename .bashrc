@@ -1,5 +1,6 @@
 #interactive mode idk how this works
 [[ $- != *i* ]] && return
+/usr/bin/fish
 
 #Prompt
 PS1='\033[1;32m\w\033[0;0m '
@@ -32,8 +33,7 @@ alias rmdir='printf "\033[1;35m" && rmdir -v'
 alias vpm='vpm --color=yes'
 alias neofetch='fastfetch'
 
-#bunnyfetch
-fastfetch
+#fastfetch
 eval "$(zoxide init --cmd cd bash)"
 eval "$(starship init bash)"
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
